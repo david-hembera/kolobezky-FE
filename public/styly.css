@@ -1,0 +1,252 @@
+@font-face{
+    font-family: 'open-sans';
+    src: url(OpenSans-Regular.ttf);
+}
+body {background-color: rgb(238, 238, 238);
+    margin: 0;
+    padding: 0;
+    font-family: open-sans;
+    
+    }
+
+    
+    .buttons-column{ 
+        flex-grow: 0;
+        width: 150px;
+        height: 35px;
+        font-size: 130%;
+        position: relative; left: 700px;
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .skladem{
+        color: green;
+        font-size: 20px;
+      }
+
+    
+    .myButton {
+        padding:10px 20px;        
+        border-radius:4px;
+        border:2px solid #303030;               
+        color:rgb(20, 20, 20);
+        transition: ease-out 0.3s;
+        font-size:20px;
+        outline: none;
+        text-decoration:none;
+        border: 3px solid#ecbd23;
+        position: relative;
+        z-index: 1;
+        font-weight: 700;
+        background-color: #ecbd23;
+        
+        
+       
+    }
+    .myButton:hover {
+        color: #ec9e0c;
+        cursor: pointer;
+        
+    }
+    .myButton:before{
+        transition: 0.5s all ease;
+        position: absolute;        
+        top: 0;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        opacity: 0;
+        content: "";
+        background-color: #ececec;
+    }
+    .myButton:hover:before{
+        transition: 0.5s all ease;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        z-index: -1;
+    }
+    .myButton:disabled,
+.myButton[disabled]{
+  border: 2px solid #a5a5a5;
+  background-color: #3f3f3f;
+  color: #ffc400;
+}
+    .button_objednavka {
+        background-color:#ff9900;
+        border-radius:8px;
+        border:2px solid #e4e4e4;
+        display:inline-block;
+        
+        color:rgb(0, 0, 0);
+        font-family:Arial;
+        font-size:25px;
+        padding:10px 20px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #2f6627;
+        
+       
+    }
+    .button_objednavka:hover {
+        background-color:#ffcd29;
+        color: black;
+        transition: .2s;
+        
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+    
+    .content{
+        max-width: 1250px;
+        margin: auto;
+        padding: 0px 30px;
+    }
+    .navbar{
+        position: fixed;
+        z-index: 5;
+        width: 100%;
+        padding: 10px 0;
+        background: #fffffffa;
+        
+    }
+    .navbar .content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .navbar .menu-list {
+        display: inline-flex;
+    }
+    .menu-list li{
+        list-style: none;
+    }
+    .menu-list .cancel-btn{
+        position: absolute;
+        right: 30px;
+        top: 20px;
+    }
+    .icon {
+        height: 30px;
+        width: 30px;
+    }
+   
+    .a1{
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: 600;
+        color: black;
+        
+    }
+    .a1:hover{
+        color: #ecbd23;
+        transition: .3s;
+    }
+    .a{
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+        margin-left: 50px;
+        font-weight: 500;
+    }
+    .a:hover{
+        color: #ecbd23;
+        transition: .3s;
+    }
+    .about {
+        padding: 40px 0;
+    }
+    .banner{
+        height: 40vh;
+        background: url(kolobezky_banner1.jpg) no-repeat;
+        background-size:cover;
+        background-position: center;
+        background-attachment:scroll;
+    }
+    footer{
+        margin-top: 12.5rem;
+        position: relative;
+        background: rgb(36, 36, 36);
+        color:white;
+        
+        
+    }
+    .footer-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-content h3{
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 3rem;
+    }
+    .footer-bottom{
+        background: black;
+        
+        padding: 20px 0;
+        text-align: center;
+    }
+    .footer-bottom p{
+        font-size: 14px;
+        word-spacing: 2px;
+        text-transform: capitalize;
+    }
+    .footer-bottom span{
+        text-transform: uppercase;
+        opacity: .4;
+        font-weight: 200;
+    }
+    @media screen and (max-width: 650px) {
+        
+              
+       .a{
+           margin-left: 25px;
+       }
+        
+      }
+
+    @media screen and (max-width: 545px) {
+        
+        .navbar .content{
+        float: none;
+        display:block;
+        }        
+       .a{
+           margin-left: 20px;
+       }
+        
+      }
+      @media screen and (max-width: 380px) {
+        
+        .navbar .content{
+        float: none;
+        display:inline-flex;
+        align-items: none;
+        justify-content: flex-start;
+        
+
+        }        
+       .a{
+           margin: 10px;
+       }
+        .a1{
+            display: none;
+            
+        }
+        .navbar .menu-list {
+            display:flex;
+            
+        }
+        .content{
+            
+            margin: auto;
+            padding: 0px 0px;
+        }
+      }
